@@ -28,6 +28,7 @@ body{
   display: flex;
   background-color: white;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .main-img{
@@ -97,6 +98,7 @@ body{
 }
 
 #share-to{
+  z-index: 5;
   position: absolute;
   height: 40px;
   width: 180px;
@@ -134,4 +136,49 @@ body{
   color: hsl(214, 17%, 51%);
   color: hsl(212, 23%, 69%);
   color: hsl(210, 46%, 95%);
+}
+
+@media only screen and (max-width: 650px){
+  .container{
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+  }
+
+  .main-img{
+    height: auto;
+    width: 100%;
+  }
+
+  .text{
+    padding: 0;
+    margin-top: 25px;
+  }
+
+  .text h2, .text p{
+    padding: 0 25px;
+  }
+
+  .about{
+    padding: 0 20px;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  #share-img{
+    position: static;
+    z-index: 10;
+  }
+
+  .arrow{
+    display: none;
+  }
+
+  #share-to{
+    z-index: 5;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 300px;
+  }
 }
